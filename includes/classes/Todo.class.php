@@ -1,30 +1,22 @@
 <?php
+//klass för att skapa tasks
 
 class Todo {
     //properties
     private $task = array();
 
-    //methods
-    function __construct() {
-        //kontroll om filen existerar
-        if(file_exists("todo.json")) {
-            // läser in fil
-            $file = file_get_contents("todo.json");
-
-            //omvandla till php array frpm JSON
-            $this->task = json_decode($file, true);
+    //metoder
+    //set-metod för task
+    function setTask(string $task) : bool {
+        if($task !== "") {
+            $this->task = $name;
+            return true;
         }
-    }
-
-    //set-metod
-    function setTask($task) {
-    //kontroll om textsträngen är tom, lägger till i arrayen i så fall
-        if(strlen($task) > 0) {
-            $this->task = $task;
-            array_push($task);
+        return false;
         }
+    function getTask() : string {
+        return $this->task;
     }
-
 }
 
 

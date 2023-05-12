@@ -10,16 +10,6 @@
         <br>
         <input class="btn" type="submit" value="Lägg till">
         <br>
-        
-        <span class="message">
-            <?php
-            if(isset($_SESSION['errormsg'])) {
-                echo $_SESSION['errormsg'];
-            }
-            unset($_SESSION['errormsg']);
-            ?>
-            
-        </span>
 
     </form>
 
